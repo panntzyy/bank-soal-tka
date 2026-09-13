@@ -444,7 +444,10 @@
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
-        if (currentYear !== 'all') {
+        if (currentYear === '2024/2025') {
+          emptyStateTitle.innerText = "Belum Ada Soal Resmi untuk T.A. 2024/2025";
+          emptyStateDesc.innerHTML = "Program <strong>Tes Kompetensi Akademik (TKA) Kemendikdasmen</strong> baru resmi diluncurkan perdana pada Tahun Ajaran 2025/2026.<br><br>Jika Anda memiliki arsip PDF soal tahun 2024/2025 (seperti Ujian Sekolah atau latihan asesmen), cukup masukkan file ke folder <code class='px-1.5 py-0.5 rounded bg-slate-200 font-mono text-slate-800 font-semibold'>2024/2025/</code> dan sistem akan otomatis menampilkannya.";
+        } else if (currentYear !== 'all') {
           emptyStateTitle.innerText = `Belum Ada Soal untuk Tahun Ajaran ${currentYear}`;
           emptyStateDesc.innerHTML = `Direktori <code class='px-1.5 py-0.5 rounded bg-slate-200 font-mono text-slate-800 font-semibold'>${currentYear}/</code> saat ini masih kosong karena belum dirilis resmi oleh Pusmendik Kemendikdasmen.<br><br>Begitu berkas PDF ditambahkan ke dalam direktori tersebut, kotak mata pelajaran akan otomatis muncul di halaman ini.`;
         } else {
