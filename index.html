@@ -376,6 +376,7 @@
     let currentFilter = 'all';
     let currentSearch = '';
     let currentYear = '2025/2026';
+    let availableYears = ["2025/2026", "2026/2027"];
 
     function handleYearChange(year) {
       currentYear = year;
@@ -384,6 +385,44 @@
         heroYearBadge.innerText = year === 'all' ? 'Semua Arsip Tahun' : `T.A. ${year}`;
       }
       renderCards();
+    }
+
+    function populateYearDropdown() {
+      const yearFilter = document.getElementById('yearFilter');
+      if (!yearFilter) return;
+
+      const currentVal = yearFilter.value || currentYear;
+      let html = '';
+      availableYears.forEach((yr, idx) => {
+        const isLatest = (idx === availableYears.length - 1) || (yr === '2025/2026');
+        html += `<option value="${yr}">${yr}${isLatest ? ' (Terbaru)' : ''}</option>`;
+      });
+      html += `<option value="all">Semua Tahun</option>`;
+      yearFilter.innerHTML = html;
+      if (availableYears.includes(currentVal) || currentVal === 'all') {
+        yearFilter.value = currentVal;
+      }
+    }
+
+    function initDynamicData() {
+      fetch('data.json?t=' + Date.now())
+        .then(res => {
+          if (!res.ok) throw new Error('Status ' + res.status);
+          return res.json();
+        })
+        .then(data => {
+          if (data && Array.isArray(data.subjects) && data.subjects.length > 0) {
+            subjectsData = data.subjects;
+            if (Array.isArray(data.academicYears) && data.academicYears.length > 0) {
+              availableYears = data.academicYears;
+              populateYearDropdown();
+            }
+            renderCards();
+          }
+        })
+        .catch(err => {
+          console.log('Menggunakan data bawaan:', err.message);
+        });
     }
 
     function renderCards() {
@@ -405,9 +444,9 @@
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
-        if (currentYear === '2026/2027') {
-          emptyStateTitle.innerText = "Belum Ada Soal untuk Tahun Ajaran 2026/2027";
-          emptyStateDesc.innerHTML = "Direktori <code class='px-1.5 py-0.5 rounded bg-slate-200 font-mono text-slate-800 font-semibold'>2026/2027/</code> saat ini masih kosong karena belum dirilis resmi oleh Pusmendik Kemendikdasmen.<br><br>Begitu berkas PDF ditambahkan ke dalam direktori tersebut, kotak mata pelajaran akan otomatis muncul di halaman ini.";
+        if (currentYear !== 'all') {
+          emptyStateTitle.innerText = `Belum Ada Soal untuk Tahun Ajaran ${currentYear}`;
+          emptyStateDesc.innerHTML = `Direktori <code class='px-1.5 py-0.5 rounded bg-slate-200 font-mono text-slate-800 font-semibold'>${currentYear}/</code> saat ini masih kosong karena belum dirilis resmi oleh Pusmendik Kemendikdasmen.<br><br>Begitu berkas PDF ditambahkan ke dalam direktori tersebut, kotak mata pelajaran akan otomatis muncul di halaman ini.`;
         } else {
           emptyStateTitle.innerText = "Tidak ada mata pelajaran yang cocok.";
           emptyStateDesc.innerText = "Coba ubah kata kunci pencarian atau ganti filter kategori dan tahun ajaran.";
@@ -603,8 +642,9 @@
       renderCards();
     }
 
-    // Initial render
+    // Initial render & dynamic data fetch
     renderCards();
+    initDynamicData();
   </script>
 </body>
 </html>

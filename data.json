@@ -1,0 +1,230 @@
+{
+  "updatedAt": "2026-09-13T12:12:10.895Z",
+  "totalSubjects": 22,
+  "academicYears": [
+    "2025/2026",
+    "2026/2027"
+  ],
+  "subjects": [
+    {
+      "id": "contoh-soal-bahasa-indonesia",
+      "name": "Bahasa Indonesia",
+      "category": "Wajib / Umum",
+      "year": "2025/2026",
+      "iconKey": "book",
+      "questions": 25,
+      "size": "1.4 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Indonesia.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-inggris",
+      "name": "Bahasa Inggris",
+      "category": "Wajib / Umum",
+      "year": "2025/2026",
+      "iconKey": "globe",
+      "questions": 25,
+      "size": "16.5 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Inggris.pdf"
+    },
+    {
+      "id": "contoh-soal-matematika",
+      "name": "Matematika",
+      "category": "Wajib / Umum",
+      "year": "2025/2026",
+      "iconKey": "math",
+      "questions": 25,
+      "size": "4.7 MB",
+      "fileName": "2025/2026/Contoh_Soal_Matematika.pdf"
+    },
+    {
+      "id": "contoh-soal-ppkn",
+      "name": "PPKn",
+      "category": "Wajib / Umum",
+      "year": "2025/2026",
+      "iconKey": "scale",
+      "questions": 30,
+      "size": "0.4 MB",
+      "fileName": "2025/2026/Contoh_Soal_PPKn.pdf"
+    },
+    {
+      "id": "contoh-soal-biologi",
+      "name": "Biologi",
+      "category": "MIPA",
+      "year": "2025/2026",
+      "iconKey": "dna",
+      "questions": 30,
+      "size": "2.7 MB",
+      "fileName": "2025/2026/Contoh_Soal_Biologi.pdf"
+    },
+    {
+      "id": "contoh-soal-fisika",
+      "name": "Fisika",
+      "category": "MIPA",
+      "year": "2025/2026",
+      "iconKey": "bolt",
+      "questions": 25,
+      "size": "2.7 MB",
+      "fileName": "2025/2026/Contoh_Soal_Fisika.pdf"
+    },
+    {
+      "id": "contoh-soal-kimia",
+      "name": "Kimia",
+      "category": "MIPA",
+      "year": "2025/2026",
+      "iconKey": "flask",
+      "questions": 25,
+      "size": "0.9 MB",
+      "fileName": "2025/2026/Contoh_Soal_Kimia.pdf"
+    },
+    {
+      "id": "contoh-soal-matematika-lanjut",
+      "name": "Matematika Tingkat Lanjut",
+      "category": "MIPA",
+      "year": "2025/2026",
+      "iconKey": "chart",
+      "questions": 25,
+      "size": "2.4 MB",
+      "fileName": "2025/2026/Contoh_Soal_Matematika_Lanjut.pdf"
+    },
+    {
+      "id": "contoh-soal-antropologi",
+      "name": "Antropologi",
+      "category": "IPS / Soshum",
+      "year": "2025/2026",
+      "iconKey": "culture",
+      "questions": 31,
+      "size": "14.0 MB",
+      "fileName": "2025/2026/Contoh_Soal_Antropologi.pdf"
+    },
+    {
+      "id": "contoh-soal-ekonomi",
+      "name": "Ekonomi",
+      "category": "IPS / Soshum",
+      "year": "2025/2026",
+      "iconKey": "cash",
+      "questions": 30,
+      "size": "0.6 MB",
+      "fileName": "2025/2026/Contoh_Soal_Ekonomi.pdf"
+    },
+    {
+      "id": "contoh-soal-geografi",
+      "name": "Geografi",
+      "category": "IPS / Soshum",
+      "year": "2025/2026",
+      "iconKey": "map",
+      "questions": 30,
+      "size": "22.5 MB",
+      "fileName": "2025/2026/Contoh_Soal_Geografi.pdf"
+    },
+    {
+      "id": "contoh-soal-sejarah",
+      "name": "Sejarah",
+      "category": "IPS / Soshum",
+      "year": "2025/2026",
+      "iconKey": "landmark",
+      "questions": 30,
+      "size": "1.8 MB",
+      "fileName": "2025/2026/Contoh_Soal_Sejarah.pdf"
+    },
+    {
+      "id": "contoh-soal-sosiologi",
+      "name": "Sosiologi",
+      "category": "IPS / Soshum",
+      "year": "2025/2026",
+      "iconKey": "users",
+      "questions": 31,
+      "size": "5.9 MB",
+      "fileName": "2025/2026/Contoh_Soal_Sosiologi.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-indonesia-lanjut",
+      "name": "Bahasa Indonesia Lanjut",
+      "category": "Bahasa & Budaya",
+      "year": "2025/2026",
+      "iconKey": "feather",
+      "questions": 30,
+      "size": "2.6 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Indonesia_Lanjut.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-inggris-lanjut",
+      "name": "Bahasa Inggris Lanjut",
+      "category": "Bahasa & Budaya",
+      "year": "2025/2026",
+      "iconKey": "globe",
+      "questions": 30,
+      "size": "0.7 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Inggris_Lanjut.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-arab",
+      "name": "Bahasa Arab",
+      "category": "Bahasa Asing",
+      "year": "2025/2026",
+      "iconKey": "language",
+      "questions": 30,
+      "size": "1.5 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Arab.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-jepang",
+      "name": "Bahasa Jepang",
+      "category": "Bahasa Asing",
+      "year": "2025/2026",
+      "iconKey": "language",
+      "questions": 30,
+      "size": "2.3 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Jepang.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-jerman",
+      "name": "Bahasa Jerman",
+      "category": "Bahasa Asing",
+      "year": "2025/2026",
+      "iconKey": "language",
+      "questions": 30,
+      "size": "5.6 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Jerman.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-korea",
+      "name": "Bahasa Korea",
+      "category": "Bahasa Asing",
+      "year": "2025/2026",
+      "iconKey": "language",
+      "questions": 30,
+      "size": "3.6 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Korea.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-mandarin",
+      "name": "Bahasa Mandarin",
+      "category": "Bahasa Asing",
+      "year": "2025/2026",
+      "iconKey": "language",
+      "questions": 30,
+      "size": "11.4 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Mandarin.pdf"
+    },
+    {
+      "id": "contoh-soal-bahasa-prancis",
+      "name": "Bahasa Prancis",
+      "category": "Bahasa Asing",
+      "year": "2025/2026",
+      "iconKey": "language",
+      "questions": 30,
+      "size": "13.3 MB",
+      "fileName": "2025/2026/Contoh_Soal_Bahasa_Prancis.pdf"
+    },
+    {
+      "id": "contoh-soal-projek-kreatif-dan-kewirausahaan",
+      "name": "Projek Kreatif & Kewirausahaan",
+      "category": "Kejuruan / Vokasi",
+      "year": "2025/2026",
+      "iconKey": "lightbulb",
+      "questions": 31,
+      "size": "1.4 MB",
+      "fileName": "2025/2026/Contoh_Soal_Projek_Kreatif_dan_Kewirausahaan.pdf"
+    }
+  ]
+}
