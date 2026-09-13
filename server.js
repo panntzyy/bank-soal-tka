@@ -62,13 +62,7 @@ function getLocalIp() {
 
 server.listen(PORT, () => {
   const ip = getLocalIp();
-  console.log(`=============================================================`);
-  console.log(`  PORTAL BANK SOAL TKA KEMENDIKDASMEN (NO-CACHE MODE)`);
-  console.log(`  Created & Developed by: Ilva Revan Maulana`);
-  console.log(`=============================================================`);
-  console.log(`  Server aktif & siap diakses:`);
-  console.log(`  - Di Laptop ini:   http://localhost:${PORT}`);
-  console.log(`  - Dari HP / WiFi:  http://${ip}:${PORT}`);
-  console.log(`=============================================================`);
-  console.log(`  Tekan Ctrl+C untuk menutup server.`);
+  console.log(`\n  Bank Soal TKA • by Ilva Revan Maulana`);
+  console.log(`  ➜ Local:   http://localhost:${PORT}`);
+  console.log(`  ➜ Network: http://${ip}:${PORT}\n`);
 });
