@@ -13,6 +13,7 @@ Sumber Data Resmi: [tka.kemendikdasmen.go.id/hasiltka](https://tka.kemendikdasme
 
 ## 📚 Ringkasan Konten
 
+- **Tahun Ajaran:** 2025/2026 *(Arsip aktif, siap diperbarui secara berkala setiap tahun ajaran baru)*
 - **Total Mata Pelajaran:** 22 Mapel
 - **Total Butir Soal:** 643 Soal
 - **Format Berkas:** PDF bersih tanpa header browser `file:///` atau tanggal.
