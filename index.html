@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Soal TKA Kemendikdasmen • by Ilva Revan Maulana</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+    .pro-card {
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    }
+    .pro-card:hover {
+      transform: translateY(-2px);
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col antialiased selection:bg-slate-900 selection:text-white">
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-200 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-900 text-white shadow-lg border border-slate-800">
+    <div class="w-6 h-6 rounded-lg bg-slate-800 text-emerald-400 flex items-center justify-center shrink-0">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+      </svg>
+    </div>
+    <p id="toastTitle" class="text-xs font-bold text-slate-100">Mengunduh berkas...</p>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-15 flex items-center justify-between">
+      <div class="flex items-baseline gap-2">
+        <span class="font-extrabold text-slate-900 text-base tracking-tight leading-none">Bank Soal TKA</span>
+        <span class="text-xs text-slate-500 font-medium">by <strong class="text-slate-900 font-bold">Ilva Revan Maulana</strong></span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <a 
+          href="https://tka.kemendikdasmen.go.id/hasiltka" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition"
+          title="Buka situs resmi TKA Kemendikdasmen"
+        >
+          <span>Sumber: tka.kemendikdasmen.go.id</span>
+          <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION: ULTRA-LEAN, PURE UI -->
+  <section class="bg-white border-b border-slate-200 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+            Bank Soal TKA Kemendikdasmen
+          </h1>
+          <p class="text-xs text-slate-500 font-medium mt-1">
+            Arsip Resmi Pusmendik • Sumber: <a href="https://tka.kemendikdasmen.go.id/hasiltka" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-semibold">tka.kemendikdasmen.go.id</a>
+          </p>
+        </div>
+
+        <!-- STAT BADGES: DIRECT & CONCISE -->
+        <div class="flex items-center gap-2.5 flex-wrap">
+          <div class="px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+            <span class="text-xs font-bold text-slate-900">22 Mata Pelajaran</span>
+          </div>
+          <div class="px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+            <span class="text-xs font-bold text-slate-900">643 Butir Soal</span>
+          </div>
+          <div class="px-3.5 py-2 rounded-xl bg-slate-100 border border-slate-200 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-slate-700"></span>
+            <span class="text-xs font-bold text-slate-900">Format A4 PDF</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN INTERFACE -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8" id="katalog">
+    
+    <!-- SEARCH & CATEGORY FILTERS (6 HARMONIOUS ACCENTS) -->
+    <div class="space-y-4 mb-6">
+      
+      <!-- Search Input Bar -->
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+        </div>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Cari mata pelajaran..." 
+          class="w-full pl-10 pr-20 py-2.5 bg-white border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-800 transition"
+        />
+        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+          <span id="itemCount" class="text-xs font-bold text-slate-500">22 Mapel</span>
+        </div>
+      </div>
+
+      <!-- 6-Color Category Filter Bar -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar" id="categoryFilterContainer">
+        <button class="filter-btn active shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-white transition cursor-pointer" data-cat="all">
+          Semua (22)
+        </button>
+        <button class="filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-blue-700 border border-blue-200 hover:bg-blue-50 transition cursor-pointer" data-cat="Wajib / Umum">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-blue-600 mr-1.5"></span>Wajib (4)
+        </button>
+        <button class="filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-emerald-700 border border-emerald-200 hover:bg-emerald-50 transition cursor-pointer" data-cat="MIPA">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600 mr-1.5"></span>MIPA (4)
+        </button>
+        <button class="filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-amber-700 border border-amber-200 hover:bg-amber-50 transition cursor-pointer" data-cat="IPS / Soshum">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-600 mr-1.5"></span>IPS (5)
+        </button>
+        <button class="filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-indigo-700 border border-indigo-200 hover:bg-indigo-50 transition cursor-pointer" data-cat="Bahasa & Budaya">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-indigo-600 mr-1.5"></span>Bahasa (2)
+        </button>
+        <button class="filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-rose-700 border border-rose-200 hover:bg-rose-50 transition cursor-pointer" data-cat="Bahasa Asing">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-rose-600 mr-1.5"></span>Bahasa Asing (6)
+        </button>
+        <button class="filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-cyan-700 border border-cyan-200 hover:bg-cyan-50 transition cursor-pointer" data-cat="Kejuruan / Vokasi">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-cyan-600 mr-1.5"></span>Vokasi (1)
+        </button>
+      </div>
+
+    </div>
+
+    <!-- CARDS GRID: CLEAN, STRUCTURED, ZERO NARRATIVE -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="cardsGrid">
+      <!-- Injected via JS -->
+    </div>
+
+    <!-- EMPTY STATE -->
+    <div id="emptyState" class="hidden py-16 text-center">
+      <p class="text-sm font-bold text-slate-800">Tidak ada mata pelajaran yang cocok.</p>
+      <button onclick="resetFilters()" class="mt-3 px-3.5 py-1.5 text-xs font-bold text-slate-800 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition cursor-pointer">
+        Reset Pencarian
+      </button>
+    </div>
+
+  </main>
+
+  <!-- PREVIEW MODAL -->
+  <div id="previewModal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-white w-full max-w-5xl h-[90vh] rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-slate-200">
+      <!-- Header -->
+      <div class="px-5 py-3.5 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center font-bold text-xs">
+            PDF
+          </div>
+          <div>
+            <h3 id="modalTitle" class="font-bold text-slate-900 text-sm leading-tight"></h3>
+            <p id="modalMeta" class="text-xs text-slate-500 font-medium"></p>
+          </div>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <a 
+            id="modalDownloadBtn" 
+            href="#" 
+            download 
+            onclick="showToast('Mengunduh dokumen...')"
+            class="px-3.5 py-1.5 rounded-lg bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 flex items-center gap-1.5 transition cursor-pointer"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            <span>Unduh</span>
+          </a>
+          <button onclick="closePreview()" class="w-8 h-8 rounded-lg bg-slate-200/70 hover:bg-slate-300 text-slate-700 flex items-center justify-center transition cursor-pointer font-bold text-sm">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <!-- Body Frame -->
+      <div class="flex-1 bg-slate-100 relative">
+        <iframe id="pdfFrame" class="w-full h-full border-0" src="" title="PDF Preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER: LEAN & MINIMAL -->
+  <footer class="bg-white border-t border-slate-200 mt-12 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="font-bold text-slate-900">Bank Soal TKA</span>
+        <span>•</span>
+        <span>Sumber Resmi: <a href="https://tka.kemendikdasmen.go.id/hasiltka" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">tka.kemendikdasmen.go.id/hasiltka</a></span>
+      </div>
+      <div>
+        Made by <strong class="text-slate-900 font-bold">Ilva Revan Maulana</strong>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DATA & SCRIPTS -->
+  <script>
+    // 6 CURATED CATEGORY COLOR THEMES
+    const categoryThemes = {
+      "Wajib / Umum": {
+        badge: "bg-blue-50 text-blue-700 border-blue-200",
+        icon: "bg-blue-50 text-blue-600 border-blue-200 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600",
+        borderHover: "hover:border-blue-300"
+      },
+      "MIPA": {
+        badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
+        icon: "bg-emerald-50 text-emerald-600 border-emerald-200 group-hover:bg-emerald-600 group-hover:text-white group-hover:border-emerald-600",
+        borderHover: "hover:border-emerald-300"
+      },
+      "IPS / Soshum": {
+        badge: "bg-amber-50 text-amber-700 border-amber-200",
+        icon: "bg-amber-50 text-amber-600 border-amber-200 group-hover:bg-amber-600 group-hover:text-white group-hover:border-amber-600",
+        borderHover: "hover:border-amber-300"
+      },
+      "Bahasa & Budaya": {
+        badge: "bg-indigo-50 text-indigo-700 border-indigo-200",
+        icon: "bg-indigo-50 text-indigo-600 border-indigo-200 group-hover:bg-indigo-600 group-hover:text-white group-hover:border-indigo-600",
+        borderHover: "hover:border-indigo-300"
+      },
+      "Bahasa Asing": {
+        badge: "bg-rose-50 text-rose-700 border-rose-200",
+        icon: "bg-rose-50 text-rose-600 border-rose-200 group-hover:bg-rose-600 group-hover:text-white group-hover:border-rose-600",
+        borderHover: "hover:border-rose-300"
+      },
+      "Kejuruan / Vokasi": {
+        badge: "bg-cyan-50 text-cyan-700 border-cyan-200",
+        icon: "bg-cyan-50 text-cyan-600 border-cyan-200 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600",
+        borderHover: "hover:border-cyan-300"
+      }
+    };
+
+    // Concise SVG Icons
+    const iconSvgs = {
+      math: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>`,
+      book: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>`,
+      globe: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>`,
+      scale: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>`,
+      bolt: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`,
+      flask: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>`,
+      dna: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"/></svg>`,
+      chart: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>`,
+      cash: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>`,
+      map: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>`,
+      users: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>`,
+      landmark: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"/></svg>`,
+      culture: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`,
+      feather: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/></svg>`,
+      lightbulb: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>`,
+      language: `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>`
+    };
+
+    const subjectsData = [
+      { id: "matematika", name: "Matematika", category: "Wajib / Umum", iconKey: "math", questions: 25, size: "4.9 MB", fileName: "Contoh_Soal_Matematika.pdf" },
+      { id: "bahasa-indonesia", name: "Bahasa Indonesia", category: "Wajib / Umum", iconKey: "book", questions: 25, size: "1.4 MB", fileName: "Contoh_Soal_Bahasa_Indonesia.pdf" },
+      { id: "bahasa-inggris", name: "Bahasa Inggris", category: "Wajib / Umum", iconKey: "globe", questions: 25, size: "17.3 MB", fileName: "Contoh_Soal_Bahasa_Inggris.pdf" },
+      { id: "ppkn", name: "PPKn", category: "Wajib / Umum", iconKey: "scale", questions: 30, size: "0.5 MB", fileName: "Contoh_Soal_PPKn.pdf" },
+      { id: "fisika", name: "Fisika", category: "MIPA", iconKey: "bolt", questions: 25, size: "2.8 MB", fileName: "Contoh_Soal_Fisika.pdf" },
+      { id: "kimia", name: "Kimia", category: "MIPA", iconKey: "flask", questions: 25, size: "1.0 MB", fileName: "Contoh_Soal_Kimia.pdf" },
+      { id: "biologi", name: "Biologi", category: "MIPA", iconKey: "dna", questions: 30, size: "2.8 MB", fileName: "Contoh_Soal_Biologi.pdf" },
+      { id: "matematika-lanjut", name: "Matematika Tingkat Lanjut", category: "MIPA", iconKey: "chart", questions: 25, size: "2.5 MB", fileName: "Contoh_Soal_Matematika_Lanjut.pdf" },
+      { id: "ekonomi", name: "Ekonomi", category: "IPS / Soshum", iconKey: "cash", questions: 30, size: "0.6 MB", fileName: "Contoh_Soal_Ekonomi.pdf" },
+      { id: "geografi", name: "Geografi", category: "IPS / Soshum", iconKey: "map", questions: 30, size: "23.6 MB", fileName: "Contoh_Soal_Geografi.pdf" },
+      { id: "sosiologi", name: "Sosiologi", category: "IPS / Soshum", iconKey: "users", questions: 31, size: "6.2 MB", fileName: "Contoh_Soal_Sosiologi.pdf" },
+      { id: "sejarah", name: "Sejarah", category: "IPS / Soshum", iconKey: "landmark", questions: 30, size: "1.9 MB", fileName: "Contoh_Soal_Sejarah.pdf" },
+      { id: "antropologi", name: "Antropologi", category: "IPS / Soshum", iconKey: "culture", questions: 31, size: "14.7 MB", fileName: "Contoh_Soal_Antropologi.pdf" },
+      { id: "bahasa-indonesia-lanjut", name: "Bahasa Indonesia Lanjut", category: "Bahasa & Budaya", iconKey: "feather", questions: 30, size: "2.8 MB", fileName: "Contoh_Soal_Bahasa_Indonesia_Lanjut.pdf" },
+      { id: "bahasa-inggris-lanjut", name: "Bahasa Inggris Lanjut", category: "Bahasa & Budaya", iconKey: "globe", questions: 30, size: "0.8 MB", fileName: "Contoh_Soal_Bahasa_Inggris_Lanjut.pdf" },
+      { id: "bahasa-arab", name: "Bahasa Arab", category: "Bahasa Asing", iconKey: "language", questions: 30, size: "1.5 MB", fileName: "Contoh_Soal_Bahasa_Arab.pdf" },
+      { id: "bahasa-jepang", name: "Bahasa Jepang", category: "Bahasa Asing", iconKey: "language", questions: 30, size: "2.4 MB", fileName: "Contoh_Soal_Bahasa_Jepang.pdf" },
+      { id: "bahasa-mandarin", name: "Bahasa Mandarin", category: "Bahasa Asing", iconKey: "language", questions: 30, size: "11.9 MB", fileName: "Contoh_Soal_Bahasa_Mandarin.pdf" },
+      { id: "bahasa-jerman", name: "Bahasa Jerman", category: "Bahasa Asing", iconKey: "language", questions: 30, size: "5.9 MB", fileName: "Contoh_Soal_Bahasa_Jerman.pdf" },
+      { id: "bahasa-korea", name: "Bahasa Korea", category: "Bahasa Asing", iconKey: "language", questions: 30, size: "3.8 MB", fileName: "Contoh_Soal_Bahasa_Korea.pdf" },
+      { id: "bahasa-prancis", name: "Bahasa Prancis", category: "Bahasa Asing", iconKey: "language", questions: 30, size: "14.0 MB", fileName: "Contoh_Soal_Bahasa_Prancis.pdf" },
+      { id: "pkk", name: "Projek Kreatif & Kewirausahaan", category: "Kejuruan / Vokasi", iconKey: "lightbulb", questions: 31, size: "1.4 MB", fileName: "Contoh_Soal_Projek_Kreatif_dan_Kewirausahaan.pdf" }
+    ];
+
+    let currentFilter = 'all';
+    let currentSearch = '';
+
+    function renderCards() {
+      const grid = document.getElementById('cardsGrid');
+      const emptyState = document.getElementById('emptyState');
+      const countEl = document.getElementById('itemCount');
+
+      const filtered = subjectsData.filter(item => {
+        const matchesCat = (currentFilter === 'all') || (item.category === currentFilter);
+        const matchesSearch = item.name.toLowerCase().includes(currentSearch.toLowerCase()) ||
+                              item.category.toLowerCase().includes(currentSearch.toLowerCase());
+        return matchesCat && matchesSearch;
+      });
+
+      countEl.innerText = `${filtered.length} Mapel`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      grid.innerHTML = filtered.map(item => {
+        const theme = categoryThemes[item.category] || categoryThemes["Wajib / Umum"];
+        return `
+        <div class="pro-card bg-white rounded-xl border border-slate-200 p-4 shadow-2xs hover:shadow-md ${theme.borderHover} flex flex-col justify-between group">
+          <div>
+            <!-- Top Tag & Size -->
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border ${theme.badge}">
+                ${item.category}
+              </span>
+              <span class="text-[11px] font-semibold text-slate-500">
+                ${item.size}
+              </span>
+            </div>
+
+            <!-- Title & Icon -->
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-lg border flex items-center justify-center shrink-0 transition-colors ${theme.icon}">
+                ${iconSvgs[item.iconKey] || iconSvgs.book}
+              </div>
+              <div class="min-w-0 flex-1">
+                <h3 class="font-bold text-slate-900 text-sm leading-snug truncate">
+                  ${item.name}
+                </h3>
+                <p class="text-[11px] font-semibold text-slate-500 mt-0.5">
+                  ${item.questions} Soal
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2">
+            <button 
+              onclick="openPreview('${item.fileName}', '${item.name}', '${item.questions} Soal • ${item.size}')"
+              class="flex-1 py-1.5 px-2 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center gap-1 transition cursor-pointer"
+            >
+              <span>Pratinjau</span>
+            </button>
+
+            <a 
+              href="${item.fileName}" 
+              download="${item.fileName}" 
+              onclick="showToast('Mengunduh ${item.name}...')"
+              class="flex-1 py-1.5 px-2 text-xs font-bold rounded-lg bg-slate-900 hover:bg-slate-800 text-white flex items-center justify-center gap-1 transition cursor-pointer"
+            >
+              <span>Unduh PDF</span>
+            </a>
+          </div>
+        </div>
+      `;
+      }).join('');
+    }
+
+    // Modal Preview functions
+    function openPreview(fileName, title, meta) {
+      const modal = document.getElementById('previewModal');
+      const frame = document.getElementById('pdfFrame');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalMeta = document.getElementById('modalMeta');
+      const downloadBtn = document.getElementById('modalDownloadBtn');
+
+      modalTitle.innerText = title;
+      modalMeta.innerText = meta;
+      downloadBtn.href = fileName;
+      downloadBtn.setAttribute('download', fileName);
+      
+      frame.src = fileName + '?t=' + Date.now();
+
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePreview() {
+      const modal = document.getElementById('previewModal');
+      const frame = document.getElementById('pdfFrame');
+      frame.src = 'about:blank';
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Toast Notification helper
+    let toastTimeout;
+    function showToast(title) {
+      const toast = document.getElementById('toast');
+      const toastTitle = document.getElementById('toastTitle');
+      toastTitle.innerText = title;
+
+      clearTimeout(toastTimeout);
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2500);
+    }
+
+    // Keyboard Shortcuts
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('previewModal');
+        if (!modal.classList.contains('hidden')) {
+          closePreview();
+        } else if (currentSearch) {
+          resetFilters();
+        }
+      }
+    });
+
+    document.getElementById('previewModal').addEventListener('click', (e) => {
+      if (e.target.id === 'previewModal') closePreview();
+    });
+
+    // Category Filter Buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('active');
+          const cat = b.getAttribute('data-cat');
+          if (cat === 'all') {
+            b.className = 'filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 transition cursor-pointer';
+          } else if (cat === 'Wajib / Umum') {
+            b.className = 'filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-blue-700 border border-blue-200 hover:bg-blue-50 transition cursor-pointer';
+          } else if (cat === 'MIPA') {
+            b.className = 'filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-emerald-700 border border-emerald-200 hover:bg-emerald-50 transition cursor-pointer';
+          } else if (cat === 'IPS / Soshum') {
+            b.className = 'filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-amber-700 border border-amber-200 hover:bg-amber-50 transition cursor-pointer';
+          } else if (cat === 'Bahasa & Budaya') {
+            b.className = 'filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-indigo-700 border border-indigo-200 hover:bg-indigo-50 transition cursor-pointer';
+          } else if (cat === 'Bahasa Asing') {
+            b.className = 'filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-rose-700 border border-rose-200 hover:bg-rose-50 transition cursor-pointer';
+          } else if (cat === 'Kejuruan / Vokasi') {
+            b.className = 'filter-btn shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-cyan-700 border border-cyan-200 hover:bg-cyan-50 transition cursor-pointer';
+          }
+        });
+
+        const selectedCat = btn.getAttribute('data-cat');
+        btn.classList.add('active');
+        
+        if (selectedCat === 'all') {
+          btn.className = 'filter-btn active shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-900 text-white transition cursor-pointer';
+        } else if (selectedCat === 'Wajib / Umum') {
+          btn.className = 'filter-btn active shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white transition cursor-pointer';
+        } else if (selectedCat === 'MIPA') {
+          btn.className = 'filter-btn active shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-emerald-600 text-white transition cursor-pointer';
+        } else if (selectedCat === 'IPS / Soshum') {
+          btn.className = 'filter-btn active shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-amber-600 text-white transition cursor-pointer';
+        } else if (selectedCat === 'Bahasa & Budaya') {
+          btn.className = 'filter-btn active shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-indigo-600 text-white transition cursor-pointer';
+        } else if (selectedCat === 'Bahasa Asing') {
+          btn.className = 'filter-btn active shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-rose-600 text-white transition cursor-pointer';
+        } else if (selectedCat === 'Kejuruan / Vokasi') {
+          btn.className = 'filter-btn active shrink-0 px-3 py-1.5 rounded-lg text-xs font-bold bg-cyan-600 text-white transition cursor-pointer';
+        }
+
+        currentFilter = selectedCat;
+        renderCards();
+      });
+    });
+
+    // Search Input Listener
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      currentSearch = e.target.value.trim();
+      renderCards();
+    });
+
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      currentSearch = '';
+      const firstBtn = document.querySelector('.filter-btn[data-cat="all"]');
+      if (firstBtn) firstBtn.click();
+      renderCards();
+    }
+
+    // Initial render
+    renderCards();
+  </script>
+</body>
+</html>
