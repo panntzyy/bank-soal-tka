@@ -2,7 +2,11 @@
 
 Portal unduh dan pratinjau interaktif kumpulan soal resmi Tes Keterampilan Akademik (TKA) Kemendikdasmen untuk 22 mata pelajaran SMA/SMK dalam format PDF.
 
-Dibuat oleh: **Ilva Revan Maulana** ([@panntzyy](https://github.com/panntzyy))  
+Dibuat oleh: **Ilva Revan Maulana**  
+- 📷 Instagram: [@rvnmaulna31](https://instagram.com/rvnmaulna31)  
+- 🐙 GitHub: [@panntzyy](https://github.com/panntzyy)  
+
+🌐 **Situs Aktif:** [panntzyy.github.io/bank-soal-tka](https://panntzyy.github.io/bank-soal-tka/)  
 Sumber Data Resmi: [tka.kemendikdasmen.go.id/hasiltka](https://tka.kemendikdasmen.go.id/hasiltka)
 
 ---
