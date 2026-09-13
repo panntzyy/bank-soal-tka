@@ -33,7 +33,7 @@ Sumber Data Resmi: [tka.kemendikdasmen.go.id/hasiltka](https://tka.kemendikdasme
 2. **Pratinjau Langsung (In-App PDF Preview):** Membaca soal langsung di modal tanpa harus mengunduh terlebih dahulu.
 3. **Direct Download:** Tombol unduh langsung untuk setiap mata pelajaran.
 4. **Auto-Scan & Zero Touch:** Cukup masukkan file PDF baru ke folder tahun ajaran (misal `2026/2027/`), sistem GitHub Actions akan otomatis memindai dan mengaktifkannya di web tanpa perlu mengedit HTML.
-5. **Optimasi Vercel & GitHub Pages:** Dilengkapi konfigurasi caching header untuk loading dan unduhan PDF yang cepat.
+5. **Hosting Cepat di GitHub Pages:** Dapat diakses langsung dengan performa stabil dan unduhan PDF yang lancar.
 
 ---
 
@@ -43,11 +43,3 @@ Sumber Data Resmi: [tka.kemendikdasmen.go.id/hasiltka](https://tka.kemendikdasme
 2. Masukkan berkas PDF baru (misalnya `Contoh_Soal_Fisika.pdf`).
 3. Commit & Push (atau Drag-and-Drop langsung di web GitHub).
 4. **Selesai!** GitHub Actions akan otomatis mendeteksi nama mapel, menghitung ukuran file (MB), memperbarui `data.json`, dan memunculkan kotak soalnya di website.
-
----
-
-## 🛠️ Deploy Sendiri ke Vercel
-
-1. Buka [Vercel Dashboard](https://vercel.com/new).
-2. Pilih repository `bank-soal-tka`.
-3. Klik **Deploy** (otomatis terdeteksi sebagai situs statis).
